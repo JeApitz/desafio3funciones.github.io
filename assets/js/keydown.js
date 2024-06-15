@@ -15,6 +15,16 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+document.addEventListener("keydown", function (evento) {
+  if (evento.key === "q" || evento.key === "Q") {
+    agregarElemento(q);
+  } else if (evento.key === "w" || evento.key === "W") {
+    agregarElemento(w);
+  } else if (evento.key === "e" || evento.key === "E") {
+    agregarElemento(e);
+  }
+});
+
 function color1() {
   let contenedor = document.getElementById("key");
   contenedor.style.backgroundColor = a;
@@ -38,13 +48,3 @@ function agregarElemento(color) {
   nuevocuadro.style.backgroundColor = color;
   cuadro.appendChild(nuevocuadro);
 }
-
-document.addEventListener("keydown", function (evento) {
-  if (evento.key === "q" || evento.key === "Q") {
-    agregarElemento(q);
-  } else if (evento.key === "w" || evento.key === "W") {
-    agregarElemento(w);
-  } else if (evento.key === "e" || evento.key === "E") {
-    agregarElemento(e);
-  }
-});
